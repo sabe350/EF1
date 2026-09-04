@@ -8,13 +8,13 @@ document.getElementById("loginform").addEventListener("submit", function(event){
 
 
     if (mail.match("@")=== null){
-        mensaje.innerHTML = '<div class="alert-danger"> Ingrese una direccion de correo valida </div>';
+        mensaje.innerHTML = '<div class="alert alert-danger"> Ingrese una direccion de correo valida </div>';
     }
 
     if (mail === "admin@admin.com" && password === "1234"){
-        mensaje.innerHTML = '<div class="alert-danger"> Inicio de sesion correcto, redireccionando...</div>';
+        mensaje.innerHTML = '<div class="alert alert-success"> Inicio de sesion correcto, redireccionando...</div>';
     }else{
-        mensaje.innerHTML = '<div class="alert-danger"> Credenciales no encontradas </div>';
+        mensaje.innerHTML = '<div class="alert alert-danger"> Credenciales no encontradas </div>';
     }
 
 });
