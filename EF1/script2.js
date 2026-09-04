@@ -13,8 +13,6 @@ document.getElementById("signupform").addEventListener("submit", function(event)
 
     if (nombre || apellido || password || password2 || mail || phone === null){
         mensaje2.innerHTML = '<div class="alert-danger"> Debe rellenar todos los campos </div>';
-    }else{
-       mensaje2.innerHTML = '<div class="alert-danger"> Registro completado exitosamente </div>'; 
     }
 
     if (password2 != password){
@@ -27,7 +25,8 @@ document.getElementById("signupform").addEventListener("submit", function(event)
 
     if (phone.startsWith(9) === false){
         mensaje2.innerHTML = '<div class="alert-danger"> Debe ingresar un numero valido </div>';
-    }else if (phone.lenght > 9 || phone.lenght < 9){
+    }
+    if (phone.lenght > 9 || phone.lenght < 9){
         mensaje2.innerHTML = '<div class="alert-danger"> Debe ingresar un numero valido </div>';
     }
 
