@@ -30,7 +30,7 @@ document.getElementById("signupform").addEventListener("submit", function(event)
     let phone = document.getElementById("phone").value;
     let terminos = document.getElementById("terminos").value;
 
-    let mensaje2 = document.getElementById("mensaje");
+    let mensaje2 = document.getElementById("mensaje2");
 
     if (nombre || apellido || password || password2 || mail || phone === null){
         mensaje2.innerHTML = '<div class="alert-danger"> Debe rellenar todos los campos </div>';
@@ -51,4 +51,7 @@ document.getElementById("signupform").addEventListener("submit", function(event)
         mensaje2.innerHTML = '<div class="alert-danger"> Debe ingresar un numero valido </div>';
     }
 
-})
+    if (terminos.checked === false){
+        mensaje2.innerHTML = '<div class="alert-danger"> Debe aceptar los terminos y condiciones </div>';
+    }
+});
